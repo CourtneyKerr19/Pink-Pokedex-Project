@@ -47,3 +47,28 @@ searchInput.addEventListener('input', (event) => {
     }
   });
  }); 
+
+
+ /* Function to create Pokemon Card
+function createPokemonCard(pokemonData) {
+  const pokemonCard = document.createElement('div');
+  pokemonCard.className = 'pokemon-card';
+  pokemonCard.innerHTML = `
+    <h2>${pokemonData.name}</h2>
+    <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}"/>
+    <p>Height: ${pokemonData.height}</p>
+    <p>Weight: ${pokemonData.weight}</p>
+    `;
+  pokemonContainer.appendChild(pokemonCard);
+
+  // Add Event Listener to Pokemon Card
+  pokemonCard.addEventListener('click', () => {
+    alert(`More details about ${pokemonData.name}`);
+  });
+}
+
+fetch(pokemon.url)
+  .then(response => response.json())
+  .then(pokemonData => createPokemonCard(pokemonData));
+
+*/

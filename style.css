@@ -15,10 +15,9 @@ h1 {
   text-transform: uppercase;
 }
 
-#pokemon-container {
+#cards-container {
   display: flex;
   flex-wrap: wrap; 
-  outline-color: #333; 
   color: #2a9dc6;
   justify-content: center;
   padding: 20px;
@@ -29,8 +28,42 @@ h1 {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-  width: 200px;
+  width: calc(100% / 4 - 40px); /* Responsive card width */
   background-color: #b9d7e1; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the search box */
+#search {
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: 1px solid #532d78;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .pokemon-card {
+    width: calc(100% / 2 - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #search {
+    width: 90%;
+  }
 }
