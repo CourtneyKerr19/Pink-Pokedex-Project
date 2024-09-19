@@ -28,3 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 });   
+
+//Implementing a Search Feature
+const searchInput = document.createElement('input');
+searchInput.type = 'text';
+searchInput.placeholder = 'Search Pokemon...';
+document.body.insertBefore(searchInput, pokemonContainer);
+
+searchInput.addEventListener('input', (event) => {
+  const searchTerm = event.target.value.toLowerCase();
+  const pokemonCards = document.querySelectorAll('.pokemon-card');
+  pokemonCards.forEach(card => {
+    const pokemonName = card.querySelector('h2').textContent.toLowerCase();
+    if (pokemonName.includes(searchTerm)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+ }); 
+ 
