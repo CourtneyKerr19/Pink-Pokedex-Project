@@ -1,7 +1,8 @@
-//Fetch and Display Pokemon Data
 document.addEventListener("DOMContentLoaded", () => {
-  const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=150";
+  const localApiUrl = "http://localhost:3000/pokemon";
+  const pokeApiUrl = "https://pokeapi.co/api/v2/pokemon?limit=150";
   const pokemonContainer = document.getElementById("cards-container");
+  const searchInput = document.getElementById('search');
 
   fetch(apiUrl)
   .then(response => response.json())
