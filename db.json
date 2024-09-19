@@ -3,60 +3,162 @@
     {
       "id": 1,
       "name": "Bulbasaur",
-      "height": 7
+      "height": 7,
+      "weight": 69,
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+      },
+      "types": [1, 2],  
+      "abilities": [1],  
+      "stats": [1, 2, 3],  
+      "moves": [1, 2, 3]  
     },
     {
-      "id": 2,
-      "name": "Ivysaur",
-      "height": 10
+      "id": 4,
+      "name": "Charmander",
+      "height": 6,
+      "weight": 85,
+      "sprites": {
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+      },
+      "types": [3],  
+      "abilities": [2],  
+      "stats": [4, 5, 6],  
+      "moves": [4, 5, 6]  
     }
+    
   ],
   "types": [
     {
       "id": 1,
       "name": "Grass",
-      "color": "green"
+      "weaknesses": ["Fire", "Flying", "Ice"],
+      "strengths": ["Water", "Ground", "Rock"],
+      "color": "#78C850"
     },
     {
       "id": 2,
       "name": "Poison",
-      "color": "purple"
+      "weaknesses": ["Psychic", "Ground"],
+      "strengths": ["Fairy", "Grass"],
+      "color": "#A040A0"
+    },
+    {
+      "id": 3,
+      "name": "Fire",
+      "weaknesses": ["Water", "Rock", "Ground"],
+      "strengths": ["Grass", "Bug", "Ice"],
+      "color": "#F08030"
     }
+    
   ],
   "abilities": [
     {
       "id": 1,
       "name": "Overgrow",
-      "effect": "Powers up Grass-type moves when the Pokémon's HP is low."
+      "description": "Powers up Grass-type moves when the Pokémon's HP is low.",
+      "effect": "Strengthens Grass moves in a pinch."
     },
     {
       "id": 2,
-      "name": "Chlorophyll",
-      "effect": "Boosts the Pokémon's Speed stat in harsh sunlight."
+      "name": "Blaze",
+      "description": "Powers up Fire-type moves when the Pokémon's HP is low.",
+      "effect": "Strengthens Fire moves in a pinch."
+    }
+    
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "name": "HP",
+      "value": 45,
+      "effort": 1
+    },
+    {
+      "id": 2,
+      "name": "Attack",
+      "value": 49,
+      "effort": 0
+    },
+    {
+      "id": 3,
+      "name": "Defense",
+      "value": 49,
+      "effort": 0
+    },
+    {
+      "id": 4,
+      "name": "HP",
+      "value": 39,
+      "effort": 0
+    },
+    {
+      "id": 5,
+      "name": "Attack",
+      "value": 52,
+      "effort": 1
+    },
+    {
+      "id": 6,
+      "name": "Defense",
+      "value": 43,
+      "effort": 0
     }
   ],
   "moves": [
     {
       "id": 1,
+      "name": "Tackle",
+      "power": 40
+    },
+    {
+      "id": 2,
       "name": "Vine Whip",
       "power": 45
     },
     {
-      "id": 2,
-      "name": "Razor Leaf",
-      "power": 55
+      "id": 3,
+      "name": "Growl",
+      "power": 0
+    },
+    {
+      "id": 4,
+      "name": "Scratch",
+      "power": 40
+    },
+    {
+      "id": 5,
+      "name": "Ember",
+      "power": 40
+    },
+    {
+      "id": 6,
+      "name": "Leer",
+      "power": 0
     }
   ],
   "trainers": [
     {
       "id": 1,
       "name": "Ash Ketchum",
-      "region": "Kanto"
+      "region": "Kanto",
+      "pokemons": [1, 4]  
     },
     {
       "id": 2,
       "name": "Misty",
-      "region": "Kanto"
+      "region": "Kanto",
+      "pokemons": []
     }
+    
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "PokeMaster19",
+      "email": "pokemaster19@example.com",
+      "favorites": [1, 4]  
+    }
+    
   ]
 }
