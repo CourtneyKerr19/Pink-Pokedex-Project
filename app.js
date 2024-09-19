@@ -47,4 +47,3 @@ searchInput.addEventListener('input', (event) => {
     }
   });
  }); 
- 
