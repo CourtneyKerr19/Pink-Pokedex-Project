@@ -19,4 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>Weight: ${pokemonData.weight}</p>
               `;
             pokemonContainer.appendChild(pokemonCard);
+
+            //Add Event Listener to Pokemon Card
+            pokemonCard.addEventListener('click', () => {
+              alert(`More details about ${pokemonData.name}`);
+            });
           }); 
+      });
+    });
+});   
